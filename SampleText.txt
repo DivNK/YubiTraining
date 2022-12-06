@@ -1,5 +1,8 @@
 This is a sample text file 
 This is the 1st modification
-Changes made in Master
 
+Changes made in Master
 Changes made in Dev1
+Changes made in Dev Branch
+2nd change in Dev
+
