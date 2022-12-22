@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Are you smarter then a 4th Grader</title>
+<style>
+    ul,li {
+  list-style-type: none;
+  margin-left: 16%;
+  padding: 0;
+  text-align: left;
+ 
+}
+  div{
+    background-color: rgb(97, 214, 214); 
+    margin-top: 10%;    
+    margin-left: 30%;
+    margin-right: 30%;
+    height: 200px;
+  }
+  
+
+</style>
+</head>
+<body>
+    <center>
+    <div id="quiz">
+
+    </div></center>
+
+    <script>
+        let score = 0;
+        let currentQuestion = 0;
+        let  quizEl = document.getElementById("quiz");
+        const questions =[
+            {
+                ques:'India lies in which continent?',
+                ans:['Asia','North America','Africa','Australia'],
+                correct: 0
+            },
+            {
+                ques:'What is the capital of India',
+                ans:['Bangalore','Delhi','Chennai','Bombay'],
+                correct: 1
+            },
+            {
+                ques:'Who is named the Nightingale of India?',
+                ans:['Margaret Atwood','Mother Teresa','Michelle Obama','Sarojini Naidu'],
+                correct: 3
+            },
+            {
+                ques:'Which is the national Bird of India?',
+                ans:['Crow ','Swan','Peacock','Duck'],
+                correct: 2
+            },
+        ]
+        function  init(i)
+        {
+            console.log(currentQuestion);
+            
+            const Q1Form =document.createElement("form");
+            Q1Form.id="Ques"
+            const Q1q=document.createElement("h2");
+            const Q1br=document.createElement("br");
+            const Q1ul=document.createElement("ul");
+            
+            let  bsub=document.createElement("button")
+            Q1q.innerHTML=currentQuestion+1 +". "+questions[i].ques;
+            Q1Form.appendChild(Q1q)
+            
+            let indexAns=0;
+            questions[i].ans.forEach(function(a){
+                
+            
+            let Q1li=document.createElement("li");
+            let Q1in=document.createElement("input");
+            let txt=document.createTextNode(a);
+            
+            
+            Q1in.type="radio";
+            Q1in.value=indexAns;
+            Q1in.name="Ans";
+            Q1li.appendChild(Q1in);
+            Q1li.appendChild(txt);
+            Q1ul.appendChild(Q1li);
+            indexAns+=1;
+        });
+        
+            
+            Q1Form.appendChild(Q1ul)
+            bsub.type="submit";
+            bsub.innerHTML="Sumit"
+            Q1Form.appendChild(Q1br);
+            Q1Form.appendChild(Q1br);
+
+            Q1Form.appendChild(bsub)
+            quizEl.appendChild(Q1Form);
+            currentQuestion +=1;
+
+
+
+
+        }
+        function clear()
+        {
+
+             quizEl.innerHTML=""
+             while (quizEl.firstChild) {
+                quizEl.removeChild(quizEl.firstChild);
+    }
+            
+        }
+  
+        //
+        document.addEventListener("submit", function(e) {
+                e.preventDefault();
+                console.log(currentQuestion);
+                if (currentQuestion!=0)
+                {
+                    const tarSel=e.target.querySelector('input[type=radio]:checked')
+                    if (tarSel==null)
+                    {
+                        return alert("Please select an answer");
+                    }
+
+                    updateResult(tarSel,currentQuestion-1);
+                }
+                
+                clear()
+                if (currentQuestion > questions.length-1)
+                {
+
+                     quizEl.innerHTML="Quiz Completed";
+                     const Qform=document.createElement("form");
+                     const Qlb=document.createElement("br");
+                     Qform.innerHTML="Score : "+score
+                     let  bsub=document.createElement("button");
+                     bsub.type="submit";
+                    bsub.innerHTML="Re Start Test";
+                    Qform.appendChild(Qlb);
+                    Qform.appendChild(bsub);
+                    quizEl.appendChild(Qform);
+                
+                    currentQuestion=0;
+                    score=0
+                     
+                }
+                else{
+                    //console.log(e);
+                 init(currentQuestion);}
+                
+
+    });
+    
+    function updateResult(selIn,quesIndex)
+    {
+        
+       
+        console.log(selIn.value);
+        console.log(questions[quesIndex].correct);
+        if(selIn.value ==questions[quesIndex].correct)
+        {
+            score+=1;
+        }
+        console.log(selIn)
+        console.log("score:"+score);
+    }
+    function showResult()
+    {
+
+    }
+        init(0);
+
+    </script>
+</body>
+</html>
