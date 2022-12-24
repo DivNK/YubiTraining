@@ -1,0 +1,83 @@
+html,body
+{
+    height: 100%;
+    width: 100%;
+    font-family: Verdana
+}
+*{
+    box-sizing:border-box;
+  }
+
+  #quiz{
+    -webkit-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.71);
+    -moz-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.71);
+    box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.71);
+    background-color:#9CC3D5FF;
+    margin-top: 10%;    
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 30%;
+    height: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    border-radius: 18px;
+  }
+    #Ques
+{
+    height: 100%;
+    width: 100%;
+    border-radius: 47px 47px 47px 47px;
+    -moz-border-radius: 47px 47px 47px 47px;
+    -webkit-border-radius: 47px 47px 47px 47px;
+}
+#quiz>button{
+    display: flex;
+   align-items: center;
+   height: 25%;
+   width: 55%;
+   background-color: #0063B2FF;
+   border: none;
+   border-radius: 8px;
+   color: white;
+   font-size: 25px;
+  
+}
+
+ul {
+    list-style-type: none;
+   
+    padding: 5px;
+    text-align: left;
+    margin-left: 40px;
+    height: 60%;
+    font-size: 20px;
+   
+  }
+  li {
+
+    display: flex;
+    justify-content: left;
+    padding: 10px;
+  }
+    #Ques>button
+{
+
+    height: 20%;
+    width: 100%;
+    border-radius: 8px;
+    background-color: #0063B2FF;
+    border: none;
+    color: white;
+    font-size: 25px;
+}
+
+#Ques>h2
+{
+    height: 5%;
+    width: 100%;
+    margin-left: 25px;
+    font-size: 25px;
+    padding-bottom: 7%;
+    
+}
