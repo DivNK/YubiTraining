@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>☆Let The Memories Begin ★</title>
+<style>
+
+body{
+        margin-left: 15%;
+        margin-right:15%;
+        font-family: Cambria;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: bottom;
+        background-size:100% 100vh;
+        background-image:url('pic_bck.jpg');
+        
+     
+        
+}
+    div{
+        margin-left: 10%  ;
+    }
+</style>
+</head>
+
+<body>
+
+<a href="Index.html"><img src="pic_main.jpg"  width="500px" height="150px"></a>
+
+<table style="width: 200px;">
+    <tr>
+        <td ><a href="Index.html"> About </a></td>
+        <td><a href="TravelBlog.html"> Page 1 </a></td>
+        <td><a href="#">Login</a></td>
+    </tr>
+</table>
+<br>
+<br>
+<div style="align-items: center;">
+<form id="payment" style="background-color: #f0ad7a;width: 50%;">
+    <fieldset>
+        <legend style="font-size: larger;">Personal Details</legend>
+        <table >
+            <tr>
+                <td >
+                <label for="nm">UserName </label></td>
+                <td >
+                    <input type="text" name="nm">
+                </td>
+            </tr>
+            <tr>
+                <td >
+                <label for="email">Email </label></td>
+                <td >
+                    <input type="email" name="email">
+                </td>
+            </tr>
+            <tr>
+                <td >
+                <label for="phn">Contact </label></td>
+                <td >
+                    <input type="number" name="phn">
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <fieldset>
+        <legend>Delivery Information</legend>
+    <table>
+        <tr>
+            <td>
+                <label for="addr">Address</label>
+            </td>
+            <td>
+                <textarea name="addr"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td >
+            <label for="pin">Pin Code </label></td>
+            <td >
+                <input type="number" name="pin">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="cntry">Country</label>
+            </td>
+            <td>
+                <datalist namr="cntry"></datalist>
+                <select name="cntry">
+                    <option value="usa">USA</option>
+                    <option value="china">China</option>
+                    <option value="india">India</option>
+                </select>
+            </td>
+        </tr>
+        
+    </table>
+    </fieldset>
+   
+</form>
+<br>
+<div >
+    
+<button type="submit" form="nameform" value="Submit" style="margin-left: 10% ;width:200px;height: 50px;border:10%;">Submit</button>   </div> 
+</div>
+</body>
+</html>
