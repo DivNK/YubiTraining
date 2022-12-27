@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Stats</title>
+    <script type = "text/javascript" src="search.js"> </script>
+<link rel="stylesheet" href="search.css">
+
+</head>
+<body>
+    <div class="main"> <center>
+        <table>
+        <tr ><td colspan="2">Search by Entering Name or Sport </td></tr>
+       <tr> 
+        <h3><td>Player Name</td>
+            <td ><input type="text" id="nmin" placeholder="Enter the Player Name"></td></h3>
+        </tr>
+       
+           <tr>
+            <h3><td>Sport</td>
+            <td><input type="text" id="spin" placeholder="Enter the Sport"></td></h3>
+          </tr>
+          <tr>
+            <h3><td>Rank</td>
+            <td><input type="text" id="rkin" placeholder="Enter the Rank"></td></h3>
+          </tr>
+    </table>
+    <div class="button-class">
+       <button onclick=display()>Search</button>
+       <button onclick=addnm() >Add</button>
+    </div>
+       <br></br>
+       <table  id="nxt" ></table></center>
+</div>
+   
+</body>
+</html>
